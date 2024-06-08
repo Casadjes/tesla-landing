@@ -1,14 +1,26 @@
 ---
+import ChargeSection from "../components/ChargeSection.astro";
 import HeroSection from "../components/HeroSection.astro";
 import LandingHeader from "../components/LandingHeader.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Tesla">
-  <main>
-    <LandingHeader />
-    <HeroSection />
-    <HeroSection />
-    <HeroSection />
+  <LandingHeader />
+  <main
+    class="snap-y snap-mandatory relative w-full h-screen overflow-auto scroll-m-0"
+  >
+    <div class="snap-start">
+      <HeroSection />
+    </div>
+    <div class="snap-start">
+      <ChargeSection />
+    </div>
+    <div class="snap-start">
+      <HeroSection />
+    </div>
+    <div class="snap-start">
+      <ChargeSection />
+    </div>
   </main>
 </Layout>
