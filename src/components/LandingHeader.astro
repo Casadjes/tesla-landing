@@ -1,47 +1,10 @@
 ---
-import Logo from "./Logo.astro";
+import LandingHeaderDesktop from "./LandingHeader-Desktop.astro";
+import LandingHeaderMobile from "./LandingHeader-Mobile.astro";
 ---
 
-<header
-  class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white"
-  id="landing-header"
->
-  <div class="flex flex-grow basis-0">
-    <Logo />
-  </div>
-
-  <nav>
-    <ul
-      class="flex text-sm [&>li>a]:text-current [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
-    >
-      <li><a href="#">Model S</a></li>
-      <li><a href="#">Model 3</a></li>
-      <li><a href="#">Model X</a></li>
-      <li><a href="#">Model Y</a></li>
-      <li><a href="#">Powerall</a></li>
-      <li><a href="#">Carga</a></li>
-    </ul>
-  </nav>
-
-  <nav class="flex flex-grow basis-0 justify-end">
-    <ul
-      class="flex text-sm [&>li>a]:text-current [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
-    >
-      <li><a href="#">Soporte</a></li>
-      <li><a href="#">Tienda</a></li>
-      <li><a href="#">Cuenta</a></li>
-      <li><a href="#">Menu</a></li>
-    </ul>
-  </nav>
-
-  <div
-    id="menu-backdrop"
-    class={`absolute bg-black/5 backdrop-blur-lg rounded
-           translate-x-[var(--left)] translate-y-[var(--top)] left-0 top-0 w-[var(--width)] h-[var(--height)]
-           transition-all duration-300 ease-in-out opacity-0 -z-10`}
-  >
-  </div>
-</header>
+<LandingHeaderDesktop />
+<LandingHeaderMobile />
 <script>
   const $listItems = document.querySelectorAll("#landing-header li");
   const $menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement;
