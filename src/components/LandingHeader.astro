@@ -3,8 +3,11 @@ import LandingHeaderDesktop from "./LandingHeader-Desktop.astro";
 import LandingHeaderMobile from "./LandingHeader-Mobile.astro";
 ---
 
-<LandingHeaderMobile />
-<LandingHeaderDesktop />
+<header class="w-full">
+  <LandingHeaderMobile />
+  <LandingHeaderDesktop />
+</header>
+
 <script>
   const $listItems = document.querySelectorAll("#landing-header li");
   const $menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement;
@@ -28,11 +31,13 @@ import LandingHeaderMobile from "./LandingHeader-Mobile.astro";
   });
 </script>
 <script>
-  const $header = document.querySelector("#landing-header") as HTMLElement;
+  const $header = document.querySelectorAll(
+    ".landing-header"
+  ) as NodeListOf<HTMLElement>;
   const observerOptions = {
     root: null,
-    rootMargin: "0px", // en cuanto se vea el elemento
-    threshold: 0.9, //porcetaje de visibilidad
+    rootMargin: "0px",
+    threshold: 0.9,
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -40,7 +45,9 @@ import LandingHeaderMobile from "./LandingHeader-Mobile.astro";
       const { isIntersecting } = entry;
       if (isIntersecting) {
         const color = entry.target.getAttribute("data-header-color");
-        $header.style.color = color;
+        Array.from($header).forEach((header) => {
+          header.style.color = color;
+        });
       }
     });
   }, observerOptions);
