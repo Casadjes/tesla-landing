@@ -1,6 +1,6 @@
 
 ## Tesla Landing Page Clone
-Este proyecto es un clon de la página web de Tesla, creado para practicar y demostrar habilidades en desarrollo web. La landing page replica el diseño y funcionalidad de la página oficial de Tesla, incluyendo elementos interactivos y responsivos.
+Este proyecto es un clon de la página web de Tesla hecho por <a href="https://www.youtube.com/c/midudev">midudev</a>, creado para practicar y demostrar habilidades en desarrollo web. La landing page replica el diseño y funcionalidad de la página oficial de Tesla, incluyendo elementos interactivos y responsivos.
 
 ## Demo
 ![image](https://github.com/Casadjes/tesla-landing/assets/115717042/f1d5625e-a470-4f8f-b3e0-c11ee691f56e)
